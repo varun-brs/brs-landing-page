@@ -1,11 +1,3 @@
-/** 
-Author:    Build Rise Shine with Nyros (BRS) 
-Created:   2023
-Library / Component: Script file
-Description: Landing page
-(c) Copyright by BRS with Nyros. 
-**/
-
 // API Key
 const MAPBOX_API =
   "pk.eyJ1IjoiZ29waWtybSIsImEiOiJjbGVjamdlcTYwNDVkM29tdW84ZXM0OHJzIn0.QFjEknxbT-y6iB_ZPJb1-w";
