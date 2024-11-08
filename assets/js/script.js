@@ -1,8 +1,8 @@
-// API Key
+// API-key
 const MAPBOX_API =
   "pk.eyJ1IjoiZ29waWtybSIsImEiOiJjbGVjamdlcTYwNDVkM29tdW84ZXM0OHJzIn0.QFjEknxbT-y6iB_ZPJb1-w";
 
-// random quotes
+// random-quotes
 const quotes = [
   "I am capable of achieving my goals.",
   "Today is going to be a great day.",
@@ -11,7 +11,7 @@ const quotes = [
   "My thoughts and feelings matter.",
 ];
 
-// Get image path from assets folder
+// Get-image-path-from-assets-folder
 const bgURL = [
   "./assets/img/landing-bg-1.jpg",
   "./assets/img/landing-bg-2.jpg",
@@ -20,7 +20,7 @@ const bgURL = [
   "./assets/img/landing-bg-5.jpg",
 ];
 
-// DOM Elements
+// DOM-Elements
 const landingpageBg = document.getElementById("landingpageBg");
 const greeting = document.getElementById("greet");
 const greetName = document.getElementById("name");
@@ -28,13 +28,13 @@ const placeName = document.getElementById("place");
 const quote = document.getElementById("quote");
 const time = document.getElementById("time");
 
-// Default theme
+// Default-theme
 let chathams_blue = "#1A4B84";
 
 // Options
 const showAmPm = true;
 
-// Get latitude and longitude
+// Get-latitude-and-longitude
 const getLocationData = () => {
   const success = (position) => {
     const latitude = position.coords.latitude;
@@ -47,7 +47,7 @@ const getLocationData = () => {
   navigator.geolocation.getCurrentPosition(success, error);
 };
 
-// API call to convert latitude & longitude to place
+// API-call-to-convert-latitude-&-longitude-to-place
 const getData = async (lat, long) => {
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${long},${lat}.json?types=place&access_token=${MAPBOX_API}`;
   const response = await fetch(url);
@@ -157,10 +157,3 @@ displayTime();
 getQuote();
 greetings();
 getName();
-
-// Set theme
-function setTheme(theme) {
-  document.documentElement.style.setProperty("--primary-color", theme);
-  localStorage.setItem("movie-theme", theme);
-}
-setTheme(localStorage.getItem("movie-theme") || chathams_blue);
